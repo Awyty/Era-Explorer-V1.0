@@ -1,0 +1,24 @@
+-- First Script (Library)
+
+local library = {}
+
+-- Create a GUI service called Azure
+local Azure = Instance.new("GuiService")
+Azure.Name = "Azure"
+Azure.Parent = game:GetService("CoreGui")
+
+-- Hydro variable for creating a frame
+local Hydro = true -- Default value
+
+-- Function to create a frame with given properties
+function library.createFrame(parent, name, size, position, color)
+    local frame = Instance.new("Frame")
+    frame.Parent = parent
+    frame.Name = name
+    frame.Size = size
+    frame.Position = position
+    frame.BackgroundColor3 = color
+end
+
+-- Loadstring to use this script externally
+return library
